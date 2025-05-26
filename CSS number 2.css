@@ -1,0 +1,71 @@
+h2,
+h1
+    {
+    color:  rgb(255, 255, 255);
+}
+
+h2 {
+    font-style : italic;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+
+
+/* Orphée */
+  .photo-officier0 {
+    border: 0px solid transparent; /* Pas de bordure au départ */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Quand on survole l’image d'Orphée */
+.photo-officier0:hover {
+    border: 3px solid #fffeff; /* Couleur du cadre */
+    box-shadow: 0 0 10px rgba(9, 4, 79, 0.5); /* si je veux : petite ombre autour */
+}
+
+
+/* Mark */
+.photo-officierM {
+    border: 0px solid transparent; /* Pas de bordure au départ */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Quand on survole l’image de Mark */
+.photo-officierM:hover {
+    border: 3px solid #fffeff; /* Couleur du cadre */
+    box-shadow: 0 0 10px rgba(9, 4, 79, 0.5); /* si je veux : petite ombre autour */
+
+}
+
+/* Romeo */
+.photo-officierR {
+    border: 0px solid transparent; /* Pas de bordure au départ */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Quand on survole l’image  */
+.photo-officierR:hover {
+    border: 3px solid #fffeff; /* Couleur du cadre */
+    box-shadow: 0 0 10px rgba(9, 4, 79, 0.5); /* si je veux : petite ombre autour */
+}
+.fond {
+  padding: 40px;
+  background-color:rgba(95, 147, 171, 0.7) ;
+  }
+
+  .demo-border {
+    border : 2px dotted
+  }
+
+  body {
+    padding: 0 200px;/* marge */
+  }
+  h4 {
+    color: rgba(0, 0, 0) ;
+  }
