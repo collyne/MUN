@@ -27,19 +27,30 @@
     
         <div class="fond">
 
-            <form method="POST" action="mailto: collyne.besson+MUN@gmail.com" 
-              enctype="multipart/form-data">
-                <label for="email">My e-mail :</label>
-                <input type="email" name="email" id="email" required><br><br>
-            
-                <label for="name">My name :</label>
-                <input type="text" name="name" id="name" required><br><br>
-            
-                <label for="comment">Any question/ comment ?</label>
-                <textarea name="comment" id="comment" rows="4" cols="40"></textarea><br><br>
-            
-                <input type="submit" value="Submit ☀️">
-            </form>
+
+    <h3>If you want to take part into MUN club, please submit this form. Then, you will be able to recieve all the informations about the sessions and the officer will put your name on the next country list.</h3>
+           <form id="contact-form">
+  <input name="name" placeholder="My name"><br><br>
+  <input name="email" placeholder="My email"><br><br>
+  <textarea name="comment" placeholder="Comment (optional)"></textarea><br><br>
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Empêche l'envoi classique
+    const formData = new FormData(this);
+
+    let message = "";
+    for (let [key, value] of formData.entries()) {
+      message += `${key} : ${decodeURIComponent(value)}\n`;
+    }
+
+    // Envoie un email via un service (comme EmailJS, Formspree, etc.)
+    // ou déclenche une boîte mail avec mailto: (limité mais possible)
+    window.location.href = `mailto:collyne.besson@gmail.com.com?subject=Message&body=${encodeURIComponent(message)}`;
+  });
+</script>
 
     </main>
 </body>
