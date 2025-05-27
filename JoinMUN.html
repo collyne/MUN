@@ -28,29 +28,28 @@
         <div class="fond">
 
 
-    <h3>If you want to take part into MUN club, please submit this form. Then, you will be able to recieve all the informations about the sessions and the officer will put your name on the next country list.</h3>
-           <form id="contact-form">
-  <input name="name" placeholder="My name"><br><br>
-  <input name="email" placeholder="My email"><br><br>
+    <form id="contact-form">
+  <input name="name" placeholder="My name" required><br><br>
+  <input name="email" placeholder="My email" type="email" required><br><br>
   <textarea name="comment" placeholder="Comment (optional)"></textarea><br><br>
   <button type="submit">Submit</button>
 </form>
 
 <script>
   document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // Empêche l'envoi classique
+    e.preventDefault(); // Prevent default form submission
     const formData = new FormData(this);
 
     let message = "";
     for (let [key, value] of formData.entries()) {
-      message += `${key} : ${decodeURIComponent(value)}\n`;
+      message += `${key}: ${value}\n`;
     }
 
-    // Envoie un email via un service (comme EmailJS, Formspree, etc.)
-    // ou déclenche une boîte mail avec mailto: (limité mais possible)
-    window.location.href = `mailto:collyne.besson@gmail.com.com?subject=Message&body=${encodeURIComponent(message)}`;
+    // Encode message for mailto URI
+    const email = "collyne.besson@gmail.com";
+    const subject = "MUN Club Registration";
+    const body = encodeURIComponent(message);
+
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
   });
 </script>
-
-    </main>
-</body>
